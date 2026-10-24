@@ -1,0 +1,74 @@
+name: clove
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 2.3.9+6
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  change_app_package_name: ^1.5.0
+  flutter_native_splash: ^2.4.8
+  drift: ^2.35.2
+  drift_flutter: ^0.3.1
+  path_provider: ^2.1.6
+  image_picker: ^1.2.0
+  flutter_svg: ^2.3.0
+  on_audio_query_pluse: ^3.0.7
+  audio_service: ^0.18.19
+  just_audio: ^0.10.6
+  youtube_explode_dart: ^3.1.0
+  ytdlp_flutter:
+    path: packages/ytdlp_flutter
+  audio_session: ^0.2.4
+  permission_handler: ^12.0.3
+  device_info_plus: ^13.3.0
+  url_launcher: ^6.3.3
+  package_info_plus: ^10.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  drift_dev: ^2.35.1
+  build_runner: ^2.16.2
+
+dependency_overrides:
+  # Keep background playback foreground through short audio-focus handoffs.
+  audio_service:
+    path: packages/audio_service
+  # Intentional local patch: see packages/on_audio_query_plus_android/PATCHES.md.
+  on_audio_query_plus_android:
+    path: packages/on_audio_query_plus_android
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/icon/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/logo.png"
+  adaptive_icon_foreground: assets/icon/logo.png
+  adaptive_icon_background: "#0B0B0B"
+
+flutter_native_splash:
+  color: "#0B0B0B"
+  image: assets/icon/icon.png
+
+  android: true
+  ios: true
+  web: false
+
+  android_12:
+    color: "#0B0B0B"
+    image: assets/icon/icon.png
